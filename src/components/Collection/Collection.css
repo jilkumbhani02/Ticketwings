@@ -1,0 +1,78 @@
+.collection {
+    color: white;
+    font-size: 14px;
+    font-weight: 300;
+    height: 1000px;
+    cursor: pointer;
+}
+
+.newly {
+    font-size: 26px !important;
+    color: whitesmoke !important;
+    font-weight: 300;
+}
+
+.menu {
+    margin: 0px 160px;
+}
+
+.act {
+    padding: 8px 20px;
+    background-color: #707070;
+    border-radius: 30px;
+    font-weight: 500;
+}
+
+.box-image {
+    width: 100%;
+}
+
+.box {
+    min-width: 17%;
+}
+
+.coll {
+    transition: 0.8s;
+    overflow-x: visible;
+}
+
+.slider {
+    overflow: hidden;
+    margin: 0 160px;
+}
+
+.time {
+    background-color: aliceblue;
+    color: black;
+    font-weight: 500;
+    border-radius: 30px;
+    padding: 8px 20px;
+    width: fit-content;
+}
+
+.navigation {
+    color: white;
+    width: fit-content;
+    font-size: 40px;
+}
+
+.navi-left {
+    position: absolute;
+    top: 60%;
+    left: 70px;
+}
+
+.navi-right {
+    position: absolute;
+    top: 60%;
+    right: 70px;
+}
+
+.bod {
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.bodimage {
+    border-radius: 10px;
+}

@@ -1,0 +1,46 @@
+.navbar {
+    background-color: #150229;
+    color: white;
+    padding: 6px 50px !important;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.navbar_input {
+    border-radius: 30px;
+    padding: 8px 20px;
+    min-width: 350px !important;
+    border: none;
+    font-size: 14px;
+}
+
+.logo1 {
+    display: none;
+}
+
+@media(max-width:1350px) {
+    .hide {
+        display: none;
+    }
+}
+
+@media(max-width:860px) {
+    .inputhide {
+        display: none;
+    }
+}
+
+@media(max-width:500px) {
+    .navbar {
+        padding: 6px 20px !important;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .logo1 {
+        display: block;
+    }
+}
