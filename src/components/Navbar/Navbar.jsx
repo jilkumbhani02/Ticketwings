@@ -5,12 +5,14 @@ import logo1 from "../../Assets/Group 1.png";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdEdit } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   return (
     <div className="navbar d-flex gap-5">
       <div className="company_logo">
-        <img src={logo} alt="" className="logo" />
+        <img onClick={() => navigate("/")} src={logo} alt="" className="logo" />
         <img src={logo1} alt="" className="logo1" />
       </div>
       <div className="d-flex gap-2 align-items-center">

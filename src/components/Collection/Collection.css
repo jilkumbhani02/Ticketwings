@@ -2,7 +2,6 @@
     color: white;
     font-size: 14px;
     font-weight: 300;
-    height: 1000px;
     cursor: pointer;
 }
 
@@ -71,8 +70,22 @@
 .bod {
     border: 1px solid white;
     border-radius: 10px;
+    min-width: 300px;
 }
 
 .bodimage {
     border-radius: 10px;
+}
+
+@media(max-width:1100px) {
+    .cenimg {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media(max-width:540px) {
+    .cenimg {
+        margin: 0px 20px;
+    }
 }

@@ -1,0 +1,44 @@
+.extra {
+    border-radius: 30px;
+    padding: 8px 20px;
+    background-color: #1a1a1a;
+    font-size: 14px;
+}
+
+.acti {
+    background-color: #c726c0;
+    font-weight: 600;
+    border-radius: 30px;
+    padding: 8px 20px;
+    font-size: 14px;
+}
+
+.collection2 {
+    cursor: pointer;
+}
+
+.newly {
+    font-size: 26px !important;
+    color: whitesmoke !important;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.act {
+    padding: 8px 20px;
+    background-color: #707070;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.full {
+    width: 259px;
+}
+
+.full img {
+    width: 100%;
+}
+
+
+

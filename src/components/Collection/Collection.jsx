@@ -7,9 +7,12 @@ import { TfiControlForward } from "react-icons/tfi";
 import { TfiControlBackward } from "react-icons/tfi";
 import image1 from "../../Assets/1.jpg";
 import image2 from "../../Assets/2.jpg";
+import { useNavigate } from "react-router-dom";
 
 const Collection = () => {
   const [menu, setMenu] = useState("Any");
+
+  const navigate = useNavigate();
 
   const slider = useRef();
   let tx = 0;
@@ -28,8 +31,12 @@ const Collection = () => {
     slider.current.style.transform = `translateX(${tx}%)`;
   };
 
+  const Change = (id) => {
+    navigate("/product/" + id);
+  };
+
   return (
-    <div className="collection d-flex flex-column gap-5">
+    <div className="collection d-flex flex-column gap-5 mb-5">
       <div className="d-flex justify-content-between menu align-items-center">
         <div className="d-flex gap-5">
           <div className="newly">Newly Added</div>
@@ -67,7 +74,12 @@ const Collection = () => {
           {Data.map((item, index) =>
             index < 15 ? (
               <div className="box" key={index}>
-                <img className="box-image" src={item.image} alt="" />
+                <img
+                  className="box-image"
+                  src={item.image}
+                  alt=""
+                  onClick={() => Change(item.id)}
+                />
                 <h4 className="mt-2">{item.name}</h4>
                 <p style={{ color: "yellow" }}>{item.price}</p>
                 <div className="time">{item.time}</div>
@@ -84,7 +96,7 @@ const Collection = () => {
       <div className="navigation navi-left" onClick={slideBackward}>
         <TfiControlBackward />
       </div>
-      <div className="d-flex gap-5 justify-content-center mt-5">
+      <div className="d-flex gap-5 justify-content-center mt-5 cenimg">
         <div className="bod">
           <img className="bodimage" src={image1} alt="" />
         </div>

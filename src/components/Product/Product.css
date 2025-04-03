@@ -1,0 +1,77 @@
+.pro-left-divs {
+    background-color: #391736;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+span {
+    color: yellow;
+}
+
+.pro-right-btn {
+    background-color: white;
+    color: black;
+    padding: 6px 20px;
+    border-radius: 30px;
+    border: none;
+    width: fit-content;
+}
+
+.show-time {
+    background-color: #291D36;
+    padding: 10px 26px;
+    border-radius: 30px;
+    width: fit-content;
+    font-weight: 500;
+}
+
+.show-time-share {
+    background-color: #291D36;
+    padding: 12px 16px;
+    border-radius: 30px;
+    width: fit-content;
+    font-weight: 500;
+    border: 1px solid white;
+    margin-left: auto;
+}
+
+.artist-img {
+    height: 70px;
+    width: 70px;
+    border-radius: 30%;
+}
+
+.sold {
+    border-radius: 30px;
+    padding: 10px 20px;
+    background-color: #36263E;
+    color: #887F8C;
+    border: none;
+}
+
+.coming{
+    background-color: #291D36;
+    padding: 10px 26px;
+    border-radius: 30px;
+    width: fit-content;
+    font-weight: 500;
+    color: #887F8C;
+    border: none;
+}
+
+.inde-btn{
+    border-radius: 30px;
+    background-color: #FFB606;
+    color: black;
+    font-weight: 500;
+    padding: 8px 15px;
+}
+
+.count{
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 10px 20px;
+
+}
