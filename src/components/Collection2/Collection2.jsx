@@ -14,7 +14,7 @@ const Collection2 = () => {
   return (
     <div
       className="collection2 text-white pt-5"
-      style={{ margin: "0px 160px" }}
+      style={{ margin: "0px 100px" }}
     >
       <div className="d-flex flex-column gap-4">
         <div className="d-flex gap-5">
@@ -50,11 +50,11 @@ const Collection2 = () => {
       </div>
       <div className="collect d-flex gap-5 justify-content-center flex-wrap mt-5">
         {Data.map((item, index) =>
-          index < 12 ? (
+          index < 15 ? (
             <div className="full d-flex flex-column gap-1" key={index}>
               <img onClick={() => Change(item.id)} src={item.image} alt="" />
               <h4>{item.name}</h4>
-              <p style={{ color: "yellow" }}>{item.price}</p>
+              <p style={{ color: "yellow" }}>$ {item.price} Onwards</p>
               <div className="time">{item.time}</div>
             </div>
           ) : (

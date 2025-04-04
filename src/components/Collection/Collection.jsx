@@ -37,7 +37,7 @@ const Collection = () => {
 
   return (
     <div className="collection d-flex flex-column gap-5 mb-5">
-      <div className="d-flex justify-content-between menu align-items-center">
+      <div className="abc d-flex justify-content-between menu align-items-center">
         <div className="d-flex gap-5">
           <div className="newly">Newly Added</div>
           <div className="act">View All</div>
@@ -81,7 +81,7 @@ const Collection = () => {
                   onClick={() => Change(item.id)}
                 />
                 <h4 className="mt-2">{item.name}</h4>
-                <p style={{ color: "yellow" }}>{item.price}</p>
+                <p style={{ color: "yellow" }}>$ {item.price} Onwards</p>
                 <div className="time">{item.time}</div>
               </div>
             ) : (

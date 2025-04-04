@@ -1,11 +1,10 @@
 import "./App.css";
-import Navbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import Navbar from "./components/Navbar/Navbar";
 import Product from "./components/Product/Product";
-import { Route, Routes } from "react-router-dom";
 import Main from "./components/Main";
+import Cart from "./components/Cart/Cart";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
@@ -20,8 +19,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/product/:id" element={<Product />} />
+        <Route path="/Cart" element={<Cart />} />
       </Routes>
-      <Footer />
     </div>
   );
 }

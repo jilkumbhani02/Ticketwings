@@ -40,5 +40,20 @@
     width: 100%;
 }
 
+@media(max-width:900px) {
+    .collection2 {
+        margin: 0px 40px !important;
+    }
+}
 
+@media(max-width:680px) {
+    .collection2 {
+        margin: 0px 20px !important;
+    }
+}
 
+@media(max-width:445px) {
+    .collection2 {
+        margin: 0px 10px !important;
+    }
+}
