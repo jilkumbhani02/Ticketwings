@@ -33,3 +33,5 @@ const CounterSlice = createSlice({
 });
 export const { addToCart, removeFromCart } = CounterSlice.actions;
 export default CounterSlice.reducer;
+
+

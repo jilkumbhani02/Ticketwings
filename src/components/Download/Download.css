@@ -1,0 +1,15 @@
+.download-box {
+    background-color: #150229;
+    width: 500px;
+    border-radius: 30px;
+    border: 1px solid white;
+    padding: 50px 20px;
+
+}
+
+.do {
+    position: fixed;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.7)!important;
+
+}

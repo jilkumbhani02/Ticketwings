@@ -7,8 +7,9 @@ import { MdEdit } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
 import { useNavigate } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({setShow}) => {
   const navigate = useNavigate();
+
   return (
     <div className="navbar d-flex gap-5">
       <div className="company_logo">
@@ -39,7 +40,9 @@ const Navbar = () => {
         </div>
       </div>
       <div className="d-flex gap-5 align-items-center">
-        <div className="hide">Download App</div>
+        <div className="hide" onClick={() => setShow(true)}>
+          Download App
+        </div>
         <div className="hide">About Us</div>
         <div className="hide">Partners</div>
         <div className="hide">Login/SignUp</div>

@@ -1,7 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, removeFromCart } from "../CounterSlice";
-import "./Cart.css";
 
 const Cart = () => {
   const cartItem = useSelector((item) => item.counter.items);
@@ -9,42 +8,87 @@ const Cart = () => {
   const dispatch = useDispatch();
 
   return (
-    <div className="cart p-5">
-      <div className="d-flex flex-column gap-5">
-        {cartItem &&
+    <div className="cart p-5" style={{ minHeight: "94vh" }}>
+      <div className="d-flex flex-wrap justify-content-center gap-5">
+        {cartItem.length === 0 ? (
+          <h3 className="text-white text-center">
+            No Tickets Found Please Add Some one
+          </h3>
+        ) : (
           cartItem.map((item) => {
             return (
-              <div
-                style={{ height: "300px" }}
-                className="d-flex  w-50 m-auto gap-5 text-white"
-              >
-                <img className="h-100 w-25" src={item.image} alt="" />
-                <div>
-                  <h1>{item.name}</h1>
-                  <p>{item.time}</p>
-                  <span>$ {item.price}</span>
-                  <div className="d-flex gap-2 mt-3">
-                    <button
-                      onClick={() => dispatch(removeFromCart(item.id))}
-                      className="inde-btn"
-                    >
-                      -
-                    </button>
-                    <div className="count">{item.quantity}</div>
-                    <button
-                      onClick={() => dispatch(addToCart(item))}
-                      className="inde-btn"
-                    >
-                      +
-                    </button>
+              <div>
+                <div
+                  className="ticket"
+                  style={{
+                    backgroundColor: "white",
+                    color: "black",
+                    height: "fit-content",
+                    width: "230px",
+                    borderRadius: "16px",
+                  }}
+                >
+                  <div
+                    style={{
+                      padding: "20px",
+                    }}
+                  >
+                    <h4>{item.name}</h4>
+                    <div>
+                      <div>Show Time : </div>
+                      {item.time}
+                    </div>
                   </div>
-                  <h2 className="mt-3">
-                    Total : <span>{item.quantity * item.price}</span>
-                  </h2>
+                </div>
+
+                <div
+                  style={{
+                    backgroundColor: "white",
+                    color: "black",
+                    height: "fit-content",
+                    width: "230px",
+                    borderRadius: "16px",
+                  }}
+                >
+                  <hr style={{ border: "1px dashed black",margin:"0px" }} />
+                  <div style={{ padding: "20px" }}>
+                    <h5>Price : $ {item.price}</h5>
+                    <div>
+                      Valid For
+                      <div className="d-flex align-items-center">
+                        <button
+                          onClick={() => dispatch(removeFromCart(item.id))}
+                          style={{ height: "fit-content" }}
+                          className="btn btn-danger"
+                        >
+                          -
+                        </button>
+                        <h1
+                          style={{
+                            width: "fit-content",
+                            margin: "auto",
+                            padding: "4px 18px",
+                          }}
+                        >
+                          {item.quantity}
+                        </h1>
+                        <button
+                          onClick={() => dispatch(addToCart(item))}
+                          style={{ height: "fit-content" }}
+                          className="btn btn-success"
+                        >
+                          +
+                        </button>
+                      </div>
+                      Person
+                    </div>
+                    <h4>Pay : $ {item.price * item.quantity}</h4>
+                  </div>
                 </div>
               </div>
             );
-          })}
+          })
+        )}
       </div>
     </div>
   );

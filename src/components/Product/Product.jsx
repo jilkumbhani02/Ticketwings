@@ -153,6 +153,7 @@ const Product = () => {
                     <h4 style={{ fontWeight: "700" }}>Early Birds GA Female</h4>
                     <div className="d-flex gap-2">
                       <button
+                        disabled={count?.quantity ? false : true}
                         onClick={() => dispatch(removeFromCart(item.id))}
                         className="inde-btn"
                       >
@@ -240,9 +241,13 @@ const Product = () => {
       </div>
       <div>
         <div>
-          <button onClick={() => Book()} className="book">
-            Book Ticket
-          </button>
+          {count?.quantity ? (
+            <button onClick={() => Book()} className="book">
+              Book Ticket
+            </button>
+          ) : (
+            <></>
+          )}
         </div>
       </div>
     </div>

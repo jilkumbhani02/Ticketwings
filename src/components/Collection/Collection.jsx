@@ -8,6 +8,7 @@ import { TfiControlBackward } from "react-icons/tfi";
 import image1 from "../../Assets/1.jpg";
 import image2 from "../../Assets/2.jpg";
 import { useNavigate } from "react-router-dom";
+import Slider from "react-slick";
 
 const Collection = () => {
   const [menu, setMenu] = useState("Any");
